@@ -5,18 +5,18 @@ using UnityEngine;
 public class AnimationController : MonoBehaviour
 {
     protected Animator animator;
-    protected CharacterController controller;
+    protected TDCharacterController controller;
 
     private static readonly int FrontWalking = Animator.StringToHash("Front");
     private static readonly int BackWalking = Animator.StringToHash("Back");
     private static readonly int LeftWalking = Animator.StringToHash("Left");
     private static readonly int RightWalking = Animator.StringToHash("Right");
-    private static readonly int Attack = Animator.StringToHash("Attack");
+    private static readonly int Harvesting = Animator.StringToHash("Harvest");
 
     protected void Awake()
     {
         animator = GetComponentInChildren<Animator>();
-        controller = GetComponent<CharacterController>();
+        controller = GetComponent<TDCharacterController>();
     }
 
     // Start is called before the first frame update
@@ -56,9 +56,26 @@ public class AnimationController : MonoBehaviour
             animator.SetBool(FrontWalking, false);
             animator.SetBool(BackWalking, false);
         }
+        
     }
     private void Harvest(Vector2 obj)
     {
-        animator.SetTrigger("Harvest");
+        if(controller.harvestable)
+        {
+            animator.SetBool(FrontWalking, false);
+            animator.SetBool(BackWalking, false);
+            animator.SetBool(LeftWalking, false);
+            animator.SetBool(RightWalking, false);
+
+            controller.moveable = false;
+            animator.SetBool(Harvesting, true);
+            Invoke("StopHarvesting", 0.3f);
+        }
+    }
+
+    public void StopHarvesting()
+    {
+        animator.SetBool(Harvesting, false);
+        controller.moveable = true;
     }
 }

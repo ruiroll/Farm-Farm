@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements.Experimental;
 
-public class PlayerInputController : CharacterController
+public class PlayerInputController : TDCharacterController
 {
     private Camera _camera;
     private void Awake()
@@ -19,5 +20,12 @@ public class PlayerInputController : CharacterController
 
     public void OnHarvest()
     {
+        Vector2 nowPosition = transform.position;
+        CallHarvestEvent(nowPosition);
+    }
+
+    public void OnInventory()
+    {
+        CallInventoryEvent();
     }
 }
