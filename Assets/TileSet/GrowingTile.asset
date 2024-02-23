@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3651eafd0c982854ab5692ffd79d6a8f, type: 3}
   m_Name: GrowingTile
   m_EditorClassIdentifier: 
-  tileBase: {fileID: 0}
-  type: 0
+  tileBase: {fileID: 11400000, guid: a5034e3880659a1469b58df30a47ea71, type: 2}
+  type: 2

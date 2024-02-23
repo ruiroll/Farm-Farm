@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 976a543a729704247aaf2c4e811a27fa, type: 3}
   m_Name: Wateringcan
   m_EditorClassIdentifier: 
+  count: 1
   itemName: Wateringcan
   itemSprite: {fileID: 21300000, guid: 05d4393be0804334bafd8d09b8aded42, type: 3}

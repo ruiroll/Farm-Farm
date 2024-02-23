@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 976a543a729704247aaf2c4e811a27fa, type: 3}
   m_Name: Pickaxe
   m_EditorClassIdentifier: 
-  itemName: PickAxe
+  count: 0
+  itemName: Pickaxe
   itemSprite: {fileID: 21300000, guid: 85881de1617fd4d4eb44c672b24aa998, type: 3}

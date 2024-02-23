@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3651eafd0c982854ab5692ffd79d6a8f, type: 3}
   m_Name: HarvestableTile
   m_EditorClassIdentifier: 
-  tileBase: {fileID: 0}
-  type: 0
+  tileBase: {fileID: 11400000, guid: 88916d4b70507a841a3d7dbef4f89c58, type: 2}
+  type: 3
